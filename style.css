@@ -482,8 +482,7 @@ ul{
 /* Modal formulario */
 .modal-content__form{
     padding: 1rem;
-    width: 250px;
-
+    
     text-align: center;
     color: var(--white-color);
     background-color: #2a2541;
