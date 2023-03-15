@@ -558,7 +558,7 @@ ul{
     transition: all 0.4s;
 }
 .btn:hover{
-    background-color: var(--card-color);
+    background-color: var(--white-color);
 }
 
 .max-growth{
@@ -837,6 +837,7 @@ ul{
 }
 .article__container--texto{
     margin-bottom: 2rem;
+    padding: 1rem;
 }
 .article__container--texto i {
     color: var(--first-alpha-color);
@@ -1134,12 +1135,14 @@ ul{
 }
 /* Ventanas modales */
 .project__modal{
+    /* width: 250px; */
+    max-width: 250px;
     padding: 1rem;
-    max-width: 400px;
     display: flex;
     flex-direction: column;
 
-    background-color: #0b111e;
+    border-radius: 8px;
+    background-color:var(--card-purple-color);
     
 }
 .project__modal h4{
@@ -1186,11 +1189,23 @@ ul{
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
     
 }
 .technologies__item{
     color: var(--first-color);
     font-weight: 600;
+}
+@media screen and (min-width:600px) {
+    .project__modal{
+        max-width: 400px;
+    }
+    .projects__content--card > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media screen and (min-width:768px){
     .projects__container--proximos{
@@ -1213,6 +1228,7 @@ ul{
     }
     .projects__content--card p{
         font-size: 14px;
+        text-align: center;
     }
     .projects__container--proximos{
         grid-template-columns: repeat(2, 45%);
@@ -1221,7 +1237,7 @@ ul{
 
     /* Ventana modal */
     .project__modal{
-        max-width: 1024px;
+        max-width: 800px;
         flex-direction: row;
     }
     .project__modal--info{
@@ -1231,7 +1247,6 @@ ul{
         width: 50%;
         object-fit:contain;
     }
-    
 }
 @media screen and (min-width:1200px){
     .projects__content--card p{
@@ -1461,20 +1476,4 @@ ul{
    50%{
     border-color: transparent;
    }
-}
-
-/* Desplazamiento izquierda*/
-.slide-left {
-    animation: slideleft 2s linear forwards;
-}
-
-@keyframes slideleft {
-    0%{
-        transform: translate(2rem);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0);
-        opacity: 1;
-    }
 }
